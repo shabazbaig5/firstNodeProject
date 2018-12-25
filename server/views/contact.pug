@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        include includes/script
+        link(rel="stylesheet" href="./styles/home.css")
+        title #{title} | #{page}        
+    body
+        include includes/header
+        h1 contact us
+        div.form-group
+            form(method='POST' action='/contact')
+                div.form-group
+                  label(for='name') Name:
+                  input#name.form-control(type='text', placeholder='first and last' name='name')
+                div.form-group
+                  label(for='email') Email:
+                  input#email.form-control(type='email', placeholder='name@email.com' name='email')
+                button.btn.btn-primary(type='submit') Sign up
+
+        
